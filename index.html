@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Anexo N - Padrões Psicofísicos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Montserrat:wght@600;700&amp;family=Bebas+Neue&amp;family=Arimo:wght@600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "navy-blue": "#00204E",
+            "ice": "#F8F9FA",
+            "charcoal": "#333333",
+            "light-gray": "#E5E7EB",
+            "error": "#ba1a1a",
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            headline: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .info-card { display: none; }
+    .info-card.active { display: block; }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<link href="https://lh3.googleusercontent.com/aida-public/AB6AXuA42f0yKP5DLSR4wPWT23DR1f9SeS_sUSeoWiS5oVzC0fKEfPLMsC91VPrNpjByYQWZHP-MNLkegwU3n4jpa2ffprF_Fri3WpoQUVuud7NUJgQXDyf3L0ilsiDUTTUGff52F4KtcSnYWJPkBR2xmEKu38SsVgJ2aCqVJVz2yC09cY_e6irDgEStSfGOV_bUlD5H1EUYtK77zOYh8xvVECuToRiUj5tsKXJbymNYcsN1cNEsi5ikdyGG5idLnjHShDFMqJN2_b3-KA" rel="icon" title="HNRe Logo" type="image/png"></head>
+<body class="bg-ice text-charcoal font-sans antialiased pb-[80px]">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-navy-blue border-b border-navy-blue flat no-shadows z-40 transition-colors duration-200 ease-in-out">
+<div class="flex justify-center items-center px-[20px] py-2 w-full">
+<div class="flex items-center gap-2">
+<h1 class="text-xl font-bold text-white tracking-tight uppercase font-headline">DGpM-406 9rev mod3 - ANEXO N</h1>
+</div>
+</div>
+</header>
+<main class="px-[20px] py-4 max-w-lg mx-auto">
+<div class="mb-6">
+<h2 class="leading-[30px] font-bold text-navy-blue mb-1 text-[24px] text-center font-headline">Padrões Psicofísicos Admissionais</h2>
+</div>
+<!-- Segmented Control (Tabs) -->
+<div class="flex p-1 bg-gray-200 rounded-lg mb-6">
+<button class="flex-1 py-2 px-4 rounded-md text-[16px] font-bold text-center transition-colors duration-200 text-charcoal/70 hover:text-navy-blue" id="tab-indices" onclick="switchTab('indices')">Índices Mínimos</button>
+<button class="flex-1 py-2 px-4 rounded-md text-[16px] font-bold text-center transition-colors duration-200 bg-error text-white shadow-sm" id="tab-inaptidao" onclick="switchTab('inaptidao')">Inaptidão</button>
+</div>
+<!-- Tab 1: Índices Mínimos -->
+<section class="tab-content" id="content-indices">
+<div class="mb-4">
+<label class="block text-[16px] font-bold text-charcoal mb-2" for="select-indices">Selecione a Categoria</label>
+<div class="relative">
+<select class="block w-full pl-4 pr-10 py-3 text-[16px] font-normal border border-light-gray bg-white rounded-md focus:outline-none focus:ring-1 focus:ring-navy-blue focus:border-navy-blue appearance-none transition-colors" id="select-indices" onchange="showInfoCard('indices', this.value)">
+<option class="font-bold" value="altura">I - Altura, peso mínimo e máximo</option>
+<option class="font-bold" selected="" value="acuidade">II - Acuidade visual</option>
+<option class="font-bold" value="senso">III - Senso cromático</option>
+<option class="font-bold" value="dentes">IV - Dentes</option>
+<option class="font-bold" value="motilidade">V - Limites mínimos de motilidade</option>
+<option class="font-bold" value="cardio">VI - Índices cardiovasculares</option>
+<option class="font-bold" value="audicao">VII - Índice audiométrico</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-charcoal/60">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Content Cards for Índices -->
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-altura">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">straighten</span>Altura, Peso Mínimo e Máximo</h3>
+<ul class="space-y-3 text-[16px] text-charcoal">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">straighten</span>
+<span class=""><strong>Altura:</strong> CN: 1,54m a 1,95m. Demais: 1,54m (mulheres) / 1,60m (homens) a 2,00m.</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">scale</span>
+<span class=""><strong>IMC:</strong> Entre 18 e 30.</span>
+</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-acuidade"><h3 class="text-xl font-bold text-navy-blue mb-3"><span class="material-symbols-outlined text-navy-blue text-[20px] align-middle mr-2">visibility</span>Acuidade Visual</h3><ul class="space-y-3 text-[16px] text-charcoal list-disc pl-5"><li class=""><strong>CN, EN, EFOMM, EAM, CAP, CPA, CPFN:</strong> 20/100 corrigida para 20/20 em cada olho.</li><li class=""><strong>CSM, QC, T, CN e CEM:</strong> 20/400 corrigida para 20/20 em cada olho.</li><li class=""><strong>SMV Praças (até 25 anos):</strong> 20/100 corrigida para 20/20 em cada olho.</li><li class=""><strong>SMV Praças (&gt; 25 anos):</strong> 20/400 corrigida para 20/20 em cada olho.</li><li class=""><strong>SMV Oficiais:</strong> 20/400 corrigida para 20/20 em cada olho.</li></ul></div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-senso">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">palette</span>Senso Cromático</h3>
+<p class="text-[16px] text-charcoal">Pesquisa de discromatopsia realizada exclusivamente através das Pranchas de Ishihara (modelos com 24 ou 38 pranchas).</p>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-dentes">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">dentistry</span>Dentes</h3>
+<p class="text-[16px] text-charcoal">Mínimo de 20 dentes naturais, hígidos ou tratados, com pelo menos 4 molares opostos 2 a 2.</p>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)] active" id="card-indices-motilidade"><h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">accessibility_new</span>Limites Mínimos de Motilidade</h3><ul class="space-y-3 text-[16px] text-charcoal"><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">accessibility_new</span><span class=""><strong>OMBRO:</strong> Elevação 90º Abdução 90º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">architecture</span><span class=""><strong>COTOVELO:</strong> Flexão 100º Extensão 15º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">back_hand</span><span class=""><strong>PUNHO:</strong> Alcance total a 15º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">front_hand</span><span class=""><strong>MÃO:</strong> Pronossupinação a 90º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">pinch</span><span class=""><strong>DEDOS:</strong> Formação de pinça digital.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">directions_walk</span><span class=""><strong>QUADRIL:</strong> Flexão 90º. Extensão 10º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">rebase</span><span class=""><strong>JOELHO:</strong> Extensão total. Flexão 90º.</span></li><li class="flex gap-3 items-start"><span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">step</span><span class=""><strong>TORNOZELO:</strong> Dorsiflexão 10º. Flexão plantar 10º.</span></li></ul></div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-cardio">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">favorite</span>Índices Cardiovasculares</h3>
+<ul class="space-y-3 text-[16px] text-charcoal">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">monitor_heart</span>
+<span class=""><strong>Pressão Arterial:</strong> Menor ou igual a 139/89 mmHg.</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-navy-blue text-[20px] mt-0.5">favorite</span>
+<span class=""><strong>Frequência Cardíaca:</strong> Entre 50 e 100 bpm.</span>
+</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-indices-audicao">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">hearing</span>Índice Audiométrico</h3>
+<ul class="space-y-3 text-[16px] text-charcoal list-disc pl-5">
+<li class=""><b>Candidatos CN, EN, EFOMM, EAM, CAP, CPA, CPFN e SMV Praças até 25 anos:</b> Perdas de até 40dB em qualquer frequência</li>
+<li class=""><strong>Demais candidatos:</strong><br><div class="">Perdas maiores que 40dB em frequências até 3000 Hz; Nas frequências de 4000 a 8000 Hz, perdas maiores que 40 dB e menores ou iguais a 70dB , desde que satisfeitas as seguintes condições:</div><div class="">- Seja unilateral;</div><div class="">- Apresente otoscopia normal;</div><div class="">- Índice de Reconhecimento da Fala (IRF) para monossílabos maior ou igual a 88%; e</div><div class="">- Apresente Limiar de Reconhecimento da Fala (LRF) menor ou igual a 50 dB.</div></li>
+</ul>
+</div>
+</section>
+<!-- Tab 2: Condições de Inaptidão -->
+<section class="tab-content active" id="content-inaptidao">
+<div class="mb-4">
+<label class="block text-[16px] font-bold text-charcoal mb-2" for="select-inaptidao">Selecione o Sistema/Grupo</label>
+<div class="relative">
+<select class="block w-full pl-4 pr-10 py-3 text-[16px] font-normal border border-light-gray bg-white rounded-md focus:outline-none focus:ring-1 focus:ring-navy-blue focus:border-navy-blue appearance-none transition-colors" id="select-inaptidao" onchange="showInfoCard('inaptidao', this.value)">
+<option class="font-bold" value="cabeca">Cabeça e Pescoço</option>
+<option class="font-bold" value="ouvido">Ouvido e Audição</option>
+<option class="font-bold" value="olhos">Olhos e Visão</option>
+<option class="font-bold" value="boca">Boca, Nariz, Laringe, Faringe, Traqueia e Esôfago</option>
+<option class="font-bold" value="estomato">Aparelho Estomatognático</option>
+<option class="font-bold" value="pele">Pele e Tecido Celular Subcutâneo ou Conjuntivo</option>
+<option class="font-bold" value="pulmoes">Pulmões e Parede Torácica</option>
+<option class="font-bold" value="cardio_vasc">Sistema Cardiovascular e Síndromes Vasculíticas</option>
+<option class="font-bold" value="abdome">Abdome e Trato Gastrointestinal</option>
+<option class="font-bold" value="genito">Aparelho Geniturinário</option>
+<option class="font-bold" value="osteo">Aparelho Osteomioarticular e Doenças Reumatológicas</option>
+<option class="font-bold" value="metabolicas">Doenças Metabólicas e Endócrinas</option>
+<option class="font-bold" value="sangue">Sangue e Órgãos Hematopoiéticos</option>
+<option class="font-bold" value="neuro">Doenças Neurológicas</option>
+<option class="font-bold" value="psiqui">Doenças Psiquiátricas</option>
+<option class="font-bold" value="tumores">Tumores e Neoplasias</option>
+<option class="font-bold" value="gineco">Condições Ginecológicas</option>
+<option class="font-bold" value="outras">Outras condições</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-charcoal/60">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Content Cards for Inaptidão -->
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-cabeca">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">person</span>Cabeça e Pescoço</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">deformações</li>
+<li class="">perdas extensas de substância</li>
+<li class="">cicatrizes deformantes ou aderentes</li>
+<li class="">contraturas musculares anormais</li>
+<li class="">cisto branquial</li>
+<li class="">higroma cístico de pescoço e fístulas</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-ouvido">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">hearing</span>Ouvido e Audição</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Deformidades significativas ou agenesia das orelhas</li>
+<li class="">anormalidades do conduto auditivo e tímpano, exceto as desprovidas de potencialidade mórbida</li>
+<li class="">infecções crônicas recidivantes</li>
+<li class="">otite média crônica</li>
+<li class="">labirintopatias</li>
+<li class="">tumores</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-olhos">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">visibility</span>Olhos e Visão</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Ceratocone</li>
+<li class="">glaucoma</li>
+<li class="">infecções e processos inflamatórios, excetuando conjuntivites agudas e hordéolo</li>
+<li class="">ulcerações</li>
+<li class="">tumores, excetuando cisto benigno palpebral</li>
+<li class="">opacificações</li>
+<li class="">sequelas de traumatismo ou de queimaduras</li>
+<li class="">doenças congênitas e deformidades congênitas ou adquiridas, incluindo desvios dos eixos visuais</li>
+<li class="">anormalidades funcionais significativas e diminuição da acuidade visual além da tolerância permitida</li>
+<li class="">lesões retinianas</li>
+<li class="">doenças neurológicas ou musculares oculares</li>
+<li class="">discromatopsia para as cores verde e vermelha</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-boca">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">mouth</span>Boca, Nariz, Laringe, Faringe, Traqueia e Esôfago</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Anormalidades estruturais congênitas ou não</li>
+<li class="">desvio acentuado de septo nasal</li>
+<li class="">mutilações</li>
+<li class="">tumores</li>
+<li class="">atresias e retrações</li>
+<li class="">fístulas congênitas ou adquiridas</li>
+<li class="">infecções crônicas ou recidivantes</li>
+<li class="">deficiências funcionais na mastigação, deglutição, respiração, fonação, fala</li>
+<li class="">nódulos, pólipos e cistos vocais, fendas glóticas, paralisia de prega vocal, refluxo laringofaríngeo intenso e alterações na fisiologia vocal para Sargento Músico</li>
+</ul>
+</div>
+<div class="info-card p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)] active bg-red-50" id="card-inaptidao-estomato">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">dentistry</span>Aparelho Estomatognático</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Estado sanitário bucal deficiente</li>
+<li class="">cáries</li>
+<li class="">restaurações e próteses insatisfatórias</li>
+<li class="">doença periodontal não controlada pelo autocuidado</li>
+<li class="">gengivite com ou sem presença de cálculo</li>
+<li class="">infecções, cistos, neoplasias</li>
+<li class="">restos radiculares</li>
+<li class="">deformidades estruturais como fissuras labiais ou labiopalatinas não reabilitadas</li>
+<li class="">sequelas deformantes de síndromes ou de alterações do desenvolvimento maxilo-facial</li>
+<li class="">má-oclusão de origem dentária ou esquelética com comprometimento funcional</li>
+<li class="">ausência de contatos interoclusais em regiões de molares, tolerando-se a presença de próteses</li>
+<li class="">ausência dentária na bateria labial sem reabilitação</li>
+<li class="">menos de dez dentes naturais em uma das arcadas</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-pele">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">dermatology</span>Pele e Tecido Celular Subcutâneo ou Conjuntivo</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Infecções crônicas ou recidivantes, inclusive a acne com processo inflamatório agudo ou dermatose que comprometa o barbear</li>
+<li class="">micoses, infectadas ou cronificadas</li>
+<li class="">parasitoses cutâneas extensas</li>
+<li class="">eczemas alérgicos</li>
+<li class="">expressões cutâneas das doenças autoimunes, excetuando-se vitiligo, manifestações das doenças alérgicas</li>
+<li class="">ulcerações e edemas</li>
+<li class="">cicatrizes deformantes, que poderão vir a comprometer a capacidade laborativa</li>
+<li class="">afecções em que haja contraindicação à exposição solar prolongada</li>
+<li class="">tatuagens que façam alusão a ideologia terrorista ou extremista ou na região da cabeça, do rosto e da face anterior do pescoço</li>
+<li class="">sinais ou sintomas de esclerose sistêmica, esclerodermia, poliomiosite, dermatomiosite, doença mista do tecido conjuntivo, síndrome de Sjögren e síndrome antifosfolipide</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-pulmoes">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">air</span>Pulmões e Parede Torácica</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Deformidade relevante congênita ou adquirida da caixa torácica com prejuízo da função respiratória</li>
+<li class="">infecções bacterianas ou micóticas</li>
+<li class="">distúrbios ventilatórios, obstrutivos ou restritivos, hiperreatividade brônquica, história de crises de broncoespasmo ainda na adolescência</li>
+<li class="">fístula e fibrose pulmonar difusa</li>
+<li class="">tumores malignos e benignos dos pulmões e pleura</li>
+<li class="">anormalidades radiológicas, exceto se insignificantes e desprovidas de potencialidade mórbida e sem comprometimento funcional</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-cardio_vasc">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">monitor_heart</span>Sistema Cardiovascular e Síndromes Vasculíticas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Anormalidades congênitas, ressalvadas CIA, a CIV e a PCA corrigidas cirurgicamente, que não promovam repercussão hemodinâmica ou adquiridas</li>
+<li class="">infecções, inflamações, arritmias, doenças do pericárdio, miocárdio, endocárdio e da circulação intrínseca do coração</li>
+<li class="">anormalidades do feixe de condução ressalvado o bloqueio de ramo direito de primeiro grau</li>
+<li class="">doenças orovalvares</li>
+<li class="">síndrome de pré-excitação</li>
+<li class="">hipotensão arterial com sintomas</li>
+<li class="">hipertensão arterial</li>
+<li class="">níveis tensionais arteriais acima dos índices mínimos exigidos</li>
+<li class="">doenças venosas, arteriais e linfáticas</li>
+<li class="">sinais ou sintomas de vasculites sistêmicas, primárias ou secundárias</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-abdome">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">line_weight</span>Abdome e Trato Gastrointestinal</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Anormalidades da parede, exceto as diastases dos retos abdominais, desde que não comprometam a capacidade laboral</li>
+<li class="">visceromegalias</li>
+<li class="">infecções, esquistossomose e outras parasitoses graves</li>
+<li class="">micoses profundas</li>
+<li class="">história de cirurgias que alterem de forma significativa a função gastrointestinal</li>
+<li class="">doenças hepáticas e pancreáticas, exceto as desprovidas de potencialidade mórbida</li>
+<li class="">doenças inflamatórias intestinais ou quaisquer distúrbios que comprometam, de forma significativa, a função do sistema</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-genito">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">medical_services</span>Aparelho Geniturinário</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Anormalidades congênitas ou adquiridas da genitália, rins e vias urinárias, exceto fimose e as desprovidas de potencialidade mórbida</li>
+<li class="">litíases (cálculos)</li>
+<li class="">alterações demonstradas no exame de urina, cuja potencialidade mórbida não possa ser descartada</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-osteo">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">accessibility_new</span>Aparelho Osteomioarticular e Doenças Reumatológicas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class=""><b>Escoliose apresentando mais de 13 graus Cobb</b></li>
+<li class="">Lordose acentuada, com ângulo de Cobb com mais de 60 graus</li>
+<li class="">Hipercifose que ao estudo radiológico apresente mais de 45 graus Cobb ou com angulação menor, haja acunhamento de mais de 5 graus, em perfil</li>
+<li class=""><b>Genu Recurvatum com mais de 20 graus aferidos por goniômetro</b></li>
+<li class="">Genu Varum que apresente distância bicondilar superior a 7 cm</li>
+<li class="">Genu Valgum que apresente distância bimaleolar superior a 7 cm</li>
+<li class="">Megapófises da penúltima ou última vértebra lombar</li>
+<li class="">espinha bífida com repercussão neurológica</li>
+<li class=""><b>Discrepância no comprimento dos membros inferiores superior a 10 mm para candidatos até 21 anos e superior a 15 mm para os demais</b></li>
+<li class="">alterações degenerativas da coluna vertebral</li>
+<li class=""><b>presença de material de síntese não tolerado (articulares)</b></li>
+<li class=""><b>próteses articulares de qualquer espécie</b></li>
+<li class="">passado de cirurgias envolvendo articulações</li>
+<li class="">doenças ou anormalidades dos ossos e articulações, congênitas ou adquiridas, inflamatórias, infecciosas, neoplásticas e traumáticas</li>
+<li class="">sinais ou sintomas de lupos eritematoso sistêmico, artrite reumatoide, e outras doenças reumatológicas</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-metabolicas">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">vital_signs</span>Doenças Metabólicas e Endócrinas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Diabetes Mellitus</li>
+<li class="">tumores hipotalâmicos e hipofisários</li>
+<li class="">disfunção hipofisária e tireoidiana</li>
+<li class="">tumores da tireoide</li>
+<li class="">tumores de suprarrenal e suas disfunções congênitas ou adquiridas</li>
+<li class="">hipogonadismo primário ou secundário</li>
+<li class="">distúrbios do metabolismo do cálcio e fósforo, de origem endócrina</li>
+<li class="">erros inatos do metabolismo</li>
+<li class="">desenvolvimento anormal, em desacordo com a idade cronológica</li>
+<li class="">obesidade</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-sangue">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">bloodtype</span>Sangue e Órgãos Hematopoiéticos</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Alterações significativas do sangue e órgãos hematopoiéticos e/ou aquelas em que seja necessária investigação complementar</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-neuro">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">neurology</span>Doenças Neurológicas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Distúrbios neuromusculares, incluindo miastenia gravis</li>
+<li class="">afecções neurológicas</li>
+<li class="">anormalidades congênitas ou adquiridas</li>
+<li class="">ataxias, incoordenações, tremores, paresias e paralisias, atrofias, fraquezas musculares</li>
+<li class="">passado de crises convulsivas que tenham demandado tratamento neurológico</li>
+<li class="">epilepsias e doenças desmielinizantes, incluindo esclerose múltipla</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-psiqui">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">psychiatry</span>Doenças Psiquiátricas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">evidência atual ou a história pregressa de doença psiquiátrica</li>
+<li class="">uso pregresso ou atual de substâncias psicoativas ilícitas</li>
+<li class="">exame toxicológico positivo para substâncias psicoativas ilícitas</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-tumores">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">medical_information</span>Tumores e Neoplasias</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Qualquer história atual ou pregressa de tumor maligno</li>
+<li class="">tumores benignos, dependendo da localização, repercussão funcional, potencial evolutivo</li>
+<li class="">presença de sequelas decorrentes da neoplasia maligna, que gerem comprometimento da capacidade laboral</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-gineco">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">female</span>Condições Ginecológicas</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Lesões de colo, corpo e trompas uterinos, ovários, vulva, vagina, alterações mamárias e outras anormalidades adquiridas, exceto se insignificantes e/ou desprovidas de potencialidade mórbida</li>
+</ul>
+</div>
+<div class="info-card bg-white p-4 rounded-lg border border-light-gray shadow-[0px_4px_12px_rgba(0,0,0,0.08)]" id="card-inaptidao-outras">
+<h3 class="text-xl font-bold text-navy-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined">more_horiz</span>Outras condições</h3>
+<ul class="space-y-2 text-[16px] text-charcoal list-disc pl-5">
+<li class="">Doenças ou condições detectadas no momento da avaliação médico-pericial potencialmente impeditivas</li>
+<li class="">Qualquer condição que demande tratamento cirúrgico para sua correção</li>
+<li class="">vigência de pós-operatório cujo restabelecimento ultrapasse o prazo limite para o resultado</li>
+<li class="">História pregressa de cirurgia sem a devida comprovação</li>
+<li class="">Doenças, condições ou alterações de exames complementares que demandem investigação clínica que ultrapasse o prazo máximo estipulado</li>
+<li class="">sorologia positiva para o HIV sem a comprovação de portador assintomático</li>
+</ul>
+</div>
+</section>
+</main>
+<script>
+    function switchTab(tabId) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        
+        // Reset both buttons to default inactive state
+        const baseClass = "flex-1 py-2 px-4 rounded-md text-[16px] font-bold text-center transition-colors duration-200 text-charcoal/70 hover:text-navy-blue";
+        document.getElementById('tab-indices').className = baseClass;
+        document.getElementById('tab-inaptidao').className = baseClass;
+        
+        // Show selected tab content
+        document.getElementById(`content-${tabId}`).classList.add('active');
+        
+        // Highlight active button with conditional logic
+        const btn = document.getElementById(`tab-${tabId}`);
+        if (tabId === 'indices') {
+            btn.className = "flex-1 py-2 px-4 rounded-md text-[16px] font-bold text-center transition-colors duration-200 bg-navy-blue text-white shadow-sm";
+        } else if (tabId === 'inaptidao') {
+            btn.className = "flex-1 py-2 px-4 rounded-md text-[16px] font-bold text-center transition-colors duration-200 bg-error text-white shadow-sm";
+        }
+
+        // Reset cards in the switched tab to first option
+        const select = document.getElementById(`select-${tabId}`);
+        if(select) {
+            showInfoCard(tabId, select.value);
+        }
+    }
+
+    function showInfoCard(tab, value) {
+        // Hide all cards in current tab
+        const container = document.getElementById(`content-${tab}`);
+        container.querySelectorAll('.info-card').forEach(el => el.classList.remove('active'));
+        
+        // Show selected card
+        const targetCard = document.getElementById(`card-${tab}-${value}`);
+        if(targetCard) {
+            targetCard.classList.add('active');
+        }
+    }
+</script>
+<footer class="w-full bg-navy-blue text-white py-6 px-6 text-center text-xs font-bold uppercase tracking-wider mt-8">HOSPITAL NAVAL DE RECIFE <br class=""> JUNTA REGULAR DE SAÚDE</footer>
+
+
+</body></html>
